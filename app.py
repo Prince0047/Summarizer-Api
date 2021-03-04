@@ -22,11 +22,9 @@ def Sum():
         file_uploaded = request.get_json()
         data_up = file_uploaded['data']
         percent = int(file_uploaded['perc'])
-        print("data reveived!")
+
         percent = percent/100
         summary_result = summarize(data_up, percent)
-        print("here is your summary")
-        print(summary_result)
         response = {
             'headers': ["*", "Access-Control-Allow-Origin"],
             'status': 200,
