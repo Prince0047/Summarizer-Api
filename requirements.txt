@@ -2,3 +2,5 @@ flask
 spacy
 gunicorn
 flask_cors
+textblob
+gensim.summarization
