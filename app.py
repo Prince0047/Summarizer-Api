@@ -1,5 +1,5 @@
 import flask
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, render_template
 from flask_cors import CORS, cross_origin
 
 import spacy
@@ -10,6 +10,10 @@ app = Flask(__name__)
 
 CORS(app)
 
+@app.route('/')
+def main():
+    return render_template("index.htm")
+
 @app.route('/sum', methods=["GET", "POST"])
 def Sum():
     if request.method == "OPTIONS": # CORS preflight
@@ -18,9 +22,10 @@ def Sum():
         file_uploaded = request.get_json()
         data_up = file_uploaded['data']
         percent = int(file_uploaded['perc'])
-
+        print("data reveived!")
         percent = percent/100
         summary_result = summarize(data_up, percent)
+        print("here is your summary")
         print(summary_result)
         response = {
             'headers': ["*", "Access-Control-Allow-Origin"],

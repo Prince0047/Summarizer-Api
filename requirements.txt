@@ -3,4 +3,4 @@ spacy
 gunicorn
 flask_cors
 textblob
-gensim
+gensim==3.8.0
