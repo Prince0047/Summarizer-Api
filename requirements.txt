@@ -4,5 +4,6 @@ gunicorn
 flask_cors
 textblob
 gensim==3.8.0
+pytorch
 sentencepiece
 transformers
