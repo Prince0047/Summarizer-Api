@@ -6,11 +6,11 @@ import spacy
 from textblob import TextBlob
 from gensim.summarization import summarize
 
-from transformers import PegasusTokenizer, PegasusForConditionalGeneration, TFPegasusForConditionalGeneration
-# Let's load the model and the tokenizer
-model_name = "human-centered-summarization/financial-summarization-pegasus"
-tokenizer = PegasusTokenizer.from_pretrained(model_name)
-model = PegasusForConditionalGeneration.from_pretrained(model_name)
+# from transformers import PegasusTokenizer, PegasusForConditionalGeneration, TFPegasusForConditionalGeneration
+# # Let's load the model and the tokenizer
+# model_name = "human-centered-summarization/financial-summarization-pegasus"
+# tokenizer = PegasusTokenizer.from_pretrained(model_name)
+# model = PegasusForConditionalGeneration.from_pretrained(model_name)
 
 
 app = Flask(__name__)

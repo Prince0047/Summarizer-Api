@@ -4,6 +4,3 @@ gunicorn
 flask_cors
 textblob
 gensim==3.8.0
-torch
-sentencepiece
-transformers
