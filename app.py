@@ -3,7 +3,7 @@ from flask import Flask, request, redirect, render_template, send_file, send_fro
 from flask_cors import CORS, cross_origin
 
 import os
-import glob
+# import glob
 from werkzeug.utils import secure_filename
 
 import spacy
@@ -66,13 +66,13 @@ def abs_model():
 def upload_file():
     if request.method == 'POST':
         # Removing Files
-        Pfiles = glob.glob('uploads/*')
-        for f in Pfiles:
-            os.remove(f)
+        # Pfiles = glob.glob('uploads/*')
+        # for f in Pfiles:
+        #     os.remove(f)
 
-        Pfiles2 = glob.glob('uploads2/*')
-        for f in Pfiles2:
-            os.remove(f)
+        # Pfiles2 = glob.glob('uploads2/*')
+        # for f in Pfiles2:
+        #     os.remove(f)
         req = request.form
         # check if the post request has the file part
         if req['form-name'] == 'form1':
@@ -139,13 +139,13 @@ def delete_Uploads():
         req = request.form
         if req['username'] == "Prince0047" and req['password'] == "qwerty0047":
 
-            files = glob.glob('uploads/*')
-            for f in files:
-                os.remove(f)
+            # files = glob.glob('uploads/*')
+            # for f in files:
+            #     os.remove(f)
 
-            files2 = glob.glob('uploads2/*')
-            for f in files2:
-                os.remove(f)
+            # files2 = glob.glob('uploads2/*')
+            # for f in files2:
+            #     os.remove(f)
             
             
             return "Data files have been deleted..."
