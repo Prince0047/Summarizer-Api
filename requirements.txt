@@ -1,6 +1,10 @@
-flask
-spacy
-gunicorn
+Flask==1.1.2
+Flask_SQLAlchemy==2.4.3
 flask_cors
-textblob
-gensim==3.8.0
+textblob==0.15.3
+werkzeug==1.0.1
+spacy==2.1.9
+Flask_Login==0.5.0
+gensim==3.8.3
+glob
+gunicorn
